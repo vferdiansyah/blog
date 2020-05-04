@@ -4,13 +4,19 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    siteTitle: `Behind the Codes`,
+    siteTitleAlt: `Behind the Codes - Veri Ferdiansyah`,
+    siteUrl: `https://veriferdiansyah.com`,
+    siteDescription: `Everything that happens behind every lines of code that I write.`,
+    siteLanguage: `en_US`,
+    author: `Veri Ferdiansyah`,
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
+        feedTitle: `Behind the Codes - Veri Ferdiansyah`,
         navigation: [
           {
             title: `Blog`,
@@ -23,12 +29,16 @@ module.exports = {
         ],
         externalLinks: [
           {
+            name: `LinkedIn`,
+            url: `https://www.linkedin.com/in/vferdiansyah`,
+          },
+          {
             name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            url: `https://twitter.com/vferdiansyah`,
           },
           {
             name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            url: `https://www.instagram.com/vferdiansya/`,
           },
         ],
       },
@@ -43,9 +53,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Behind the Codes - Veri Ferdiansyah`,
+        short_name: `Behind the Codes`,
+        description: `Everything that happens behind every lines of code that I write.`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
