@@ -1,0 +1,47 @@
+---
+title: Introduction to NestJS
+date: 2020-05-08
+tags:
+  - NestJS
+---
+
+If you're a backend [JavaScript](https://www.javascript.com/) developer, chances are you have
+created a [Node.js](https://nodejs.org/en/) application with [Express](https://expressjs.com/),
+[Koa](https://koajs.com/), or any other frameworks or libraries. Overtime, you might have noticed
+that it became increasingly difficult to maintain because the codebase just keeps getting larger.
+
+### Introduction
+
+![NestJS](./nestjs_logo.png)
+
+In this post, I'm going to introduce you to [NestJS](https://nestjs.com/), a progressive Node.js
+framework for building efficient, reliable, and scalable server-side applications. It is deeply
+inspired by [Angular](https://angular.io/) and written on [TypeScript](https://www.typescriptlang.org/).
+So if you're familiar with Angular, it's gonna be pretty easy for you to pick up. Behind the scenes,
+NestJS actually uses Express or [Fastify](https://www.fastify.io/), depending on your configuration.
+It provides an abstraction above these frameworks.
+
+### Setting up NestJS
+
+You can install NestJS CLI using:
+``` noLineNumbers
+$ npm i -g @nestjs/cli
+```
+
+Then, create a new NestJS project with:
+``` noLineNumbers
+$ nest new <project_name>
+```
+
+Go to the project directory and run your project with:
+``` noLineNumbers
+$ npm start
+// or
+$ npm run start
+// or
+$ npm run start:dev
+```
+
+Open your web browser, point to *http://localhost:3000/* and voila!
+
+Congratulations! You just created an app using NestJS!
