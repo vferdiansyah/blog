@@ -1,0 +1,42 @@
+---
+title: CI/CD 101 with CircleCI
+date: 2021-02-07
+description: Introduction to CI/CD using CircleCI
+tags:
+  - CI/CD
+  - CircleCI
+banner: ./ci-cd.png
+---
+
+Several weeks ago, a friend of mine at [Kulkul Tech](https://kulkul.tech/),
+asked me to do a webinar about CI/CD using [CircleCI](https://circleci.com/).
+
+You can first read my brief explanation about CI/CD below or just skip to the
+end of the page and watch the recorded YouTube session.
+
+## What is CI/CD?
+
+CI (Continuous Integration) is a development practice where several developers
+integrate code into a shared repository, usually through a PR (Pull Request).
+This PR will then go through several automated steps, usually building and
+testing steps, to verify whether it's gonna broke existing code or not.
+
+CD is divided into 2 definitions, Continuous Delivery and Continuous
+Deployment. Continuous Delivery means that everything is done automatically,
+except deployment to production. Deployment to production still needs to be
+done manually, usually by a push of a button or by pushing release tag to code
+repository. While Continuous Deployment means deployment to production also
+done automatically, without needing any manual intervention.
+
+## What is CircleCI?
+
+![CircleCI](./circleci-logo.png)
+
+[CircleCI](https://circleci.com/) is a CI/CD tool that you can use to build
+your CI/CD pipeline. It heavily uses [Docker](https://www.docker.com/) in its
+workflow so if you already use Docker in your project then CircleCI is a great
+choice. If you're working on an open source project, it's free forever!
+
+Here is the recorded session of my talk about CI/CD with CircleCI on YouTube.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R5SjU80sos8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
