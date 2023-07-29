@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Understanding TypeScript: A Comprehensive Guide",
+    "date": "2023-07-28T00:00:00.000Z",
+    "tags": ["typescript"],
+    "draft": false,
+    "summary": "Discover how TypeScript empowers software engineers with static typing, enhanced tooling, and seamless JavaScript compatibility for building scalable and maintainable applications.",
+    "type": "Blog",
+    "readingTime": {
+      "text": "4 min read",
+      "minutes": 3.185,
+      "time": 191100,
+      "words": 637
+    },
+    "slug": "typescript-101",
+    "path": "blog/typescript-101",
+    "filePath": "blog/typescript-101.mdx",
+    "toc": [
+      {
+        "value": "What is TypeScript?",
+        "url": "#what-is-typescript",
+        "depth": 2
+      },
+      {
+        "value": "Getting Started with TypeScript",
+        "url": "#getting-started-with-typescript",
+        "depth": 2
+      },
+      {
+        "value": "Type Annotations and Inference",
+        "url": "#type-annotations-and-inference",
+        "depth": 2
+      },
+      {
+        "value": "Leveraging TypeScript's Features",
+        "url": "#leveraging-typescripts-features",
+        "depth": 2
+      },
+      {
+        "value": "IDE Support and Tooling",
+        "url": "#ide-support-and-tooling",
+        "depth": 2
+      },
+      {
+        "value": "Migrating JavaScript to TypeScript",
+        "url": "#migrating-javascript-to-typescript",
+        "depth": 2
+      },
+      {
+        "value": "TypeScript and ECMAScript Compatibility",
+        "url": "#typescript-and-ecmascript-compatibility",
+        "depth": 2
+      },
+      {
+        "value": "Exploring the TypeScript Ecosystem",
+        "url": "#exploring-the-typescript-ecosystem",
+        "depth": 2
+      },
+      { "value": "Conclusion", "url": "#conclusion", "depth": 2 }
+    ],
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Understanding TypeScript: A Comprehensive Guide",
+      "datePublished": "2023-07-28T00:00:00.000Z",
+      "dateModified": "2023-07-28T00:00:00.000Z",
+      "description": "Discover how TypeScript empowers software engineers with static typing, enhanced tooling, and seamless JavaScript compatibility for building scalable and maintainable applications.",
+      "image": "/static/images/twitter-card.png",
+      "url": "https://vferdiansyah.vercel.app/blog/typescript-101"
+    }
+  }
+]
