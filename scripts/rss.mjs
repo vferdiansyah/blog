@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from 'fs';
 import { slug } from 'github-slugger';
 import { join } from 'path';
+// eslint-disable-next-line import/extensions
 import { allBlogs } from '../.contentlayer/generated/index.mjs';
 import tagData from '../src/app/tag-data.json' assert { type: 'json' };
 // eslint-disable-next-line import/extensions
