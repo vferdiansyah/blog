@@ -1,16 +1,14 @@
-import Link from './Link';
-import metadata from '@/data/metadata';
 import SocialIcon from '@/components/social-icons';
+import metadata from '@/data/metadata';
+import Link from './Link';
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer>
       <div className="mt-16 flex flex-col items-center">
         <div className="mb-3 flex space-x-4">
           <SocialIcon kind="mail" href={`mailto:${metadata.email}`} />
           <SocialIcon kind="github" href={metadata.github} />
-          <SocialIcon kind="facebook" href={metadata.facebook} />
-          <SocialIcon kind="youtube" href={metadata.youtube} />
           <SocialIcon kind="linkedin" href={metadata.linkedin} />
           <SocialIcon kind="twitter" href={metadata.twitter} />
         </div>
@@ -24,4 +22,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

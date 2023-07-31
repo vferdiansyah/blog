@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import { Blog } from 'contentlayer/generated';
 import {
   ComputedFields,
@@ -8,13 +7,6 @@ import {
 import { writeFileSync } from 'fs';
 import { slug } from 'github-slugger';
 import path from 'path';
-import {
-  extractTocHeadings,
-  remarkCodeTitles,
-  remarkExtractFrontmatter,
-  remarkImgToJsx,
-} from 'pliny/mdx-plugins/index.js';
-import { allCoreContent } from 'pliny/utils/contentlayer.js';
 import readingTime from 'reading-time';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeCitation from 'rehype-citation';
@@ -24,7 +16,13 @@ import rehypePrismPlus from 'rehype-prism-plus';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
+import remarkMdxImages from 'remark-mdx-images';
 import metadata from './data/metadata';
+import {
+  remarkCodeTitles,
+  remarkExtractFrontmatter,
+  remarkExtractTocHeadings,
+} from './src/libs';
 
 const root = process.cwd();
 
@@ -42,7 +40,10 @@ const computedFields: ComputedFields = {
     type: 'string',
     resolve: (doc) => doc._raw.sourceFilePath,
   },
-  toc: { type: 'string', resolve: (doc) => extractTocHeadings(doc.body.raw) },
+  toc: {
+    type: 'string',
+    resolve: (doc) => remarkExtractTocHeadings(doc.body.raw),
+  },
 };
 
 /**
@@ -65,18 +66,18 @@ function createTagCount(allBlogs: Blog[]) {
   writeFileSync('./src/app/tag-data.json', JSON.stringify(tagCount));
 }
 
-function createSearchIndex(allBlogs: Blog[]) {
-  if (
-    metadata?.search?.provider === 'kbar' &&
-    metadata.search.kbarConfig.searchDocumentsPath
-  ) {
-    writeFileSync(
-      `public/${metadata.search.kbarConfig.searchDocumentsPath}`,
-      JSON.stringify(allCoreContent(allBlogs)),
-    );
-    console.log('Local search index generated...');
-  }
-}
+// function createSearchIndex(allBlogs: Blog[]) {
+//   if (
+//     metadata?.search?.provider === 'kbar' &&
+//     metadata.search.kbarConfig.searchDocumentsPath
+//   ) {
+//     writeFileSync(
+//       `public/${metadata.search.kbarConfig.searchDocumentsPath}`,
+//       JSON.stringify(allCoreContent(allBlogs)),
+//     );
+//     console.log('Local search index generated...');
+//   }
+// }
 
 export const BlogType = defineDocumentType(() => ({
   name: 'Blog',
@@ -142,7 +143,7 @@ export default makeSource({
       remarkGfm,
       remarkCodeTitles,
       remarkMath,
-      remarkImgToJsx,
+      remarkMdxImages,
     ],
     rehypePlugins: [
       rehypeSlug,
@@ -156,6 +157,6 @@ export default makeSource({
   onSuccess: async (importData) => {
     const { allBlogs } = await importData();
     createTagCount(allBlogs);
-    createSearchIndex(allBlogs);
+    // createSearchIndex(allBlogs);
   },
 });

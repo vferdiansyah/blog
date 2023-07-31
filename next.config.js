@@ -55,13 +55,22 @@ const securityHeaders = [
   },
 ];
 
-/** @type {import('next').NextConfig} */
-module.exports = withContentlayer(
-  withBundleAnalyzer({
+/**
+ * @type {import('next/dist/next-server/server/config').NextConfig}
+ **/
+module.exports = () => {
+  const plugins = [withContentlayer, withBundleAnalyzer];
+  return plugins.reduce((acc, next) => next(acc), {
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
-      dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
+      dirs: ['data', 'src', 'scripts'],
+    },
+    images: {
+      domains: ['picsum.photos'],
+    },
+    experimental: {
+      appDir: true,
     },
     async headers() {
       return [
@@ -71,23 +80,13 @@ module.exports = withContentlayer(
         },
       ];
     },
-    webpack: (config, { dev, isServer }) => {
+    webpack: (config, options) => {
       config.module.rules.push({
         test: /\.svg$/,
         use: ['@svgr/webpack'],
       });
 
-      if (!dev && !isServer) {
-        // Replace React with Preact only in client production build
-        Object.assign(config.resolve.alias, {
-          'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
-          react: 'preact/compat',
-          'react-dom/test-utils': 'preact/test-utils',
-          'react-dom': 'preact/compat',
-        });
-      }
-
       return config;
     },
-  }),
-);
+  });
+};
