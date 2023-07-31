@@ -22,12 +22,77 @@ Setting up a TypeScript development environment is straightforward.
 Begin by installing TypeScript and configuring the compiler to convert TypeScript code into plain JavaScript.
 This will enable you to utilize the full potential of TypeScript in your projects.
 
+Setting up a TypeScript development environment is straightforward.
+First, you need to install TypeScript globally using Node Package Manager (NPM).
+Open your terminal and run the following command:
+
+```bash
+npm install -g typescript
+```
+
+Once TypeScript is installed, you can create a new TypeScript file with the extension `.ts`.
+
 ## Type Annotations and Inference
 
 Type annotations play a vital role in TypeScript development.
 They allow you to explicitly specify data types, aiding in catching errors and improving code quality.
 Additionally, TypeScript's type inference mechanism automatically determines types based on assigned values, reducing the need for redundant type declarations.
 Embracing both type annotations and inference will significantly enhance your development experience.
+
+Let's create a simple example to understand how type annotations work. Create a file named `hello.ts` and add the following TypeScript code:
+
+```typescript
+// Type annotation for variables
+let message: string = 'Hello, TypeScript!';
+let count: number = 10;
+
+// Type annotation for functions
+function greet(name: string): string {
+  return `Hello, ${name}!`;
+}
+
+// Type annotation for arrays
+let fruits: string[] = ['apple', 'banana', 'orange'];
+
+// Type annotation for objects
+interface Person {
+  name: string;
+  age: number;
+}
+
+let person: Person = {
+  name: 'John Doe',
+  age: 30,
+};
+
+console.log(message);
+console.log(greet('Alice'));
+console.log(fruits);
+console.log(person);
+```
+
+Now, let's compile the TypeScript code into JavaScript. In your terminal, navigate to the folder containing `hello.ts`, and run the following command:
+
+```bash
+tsc hello.ts
+```
+
+This will generate a `hello.js` file, which is the compiled JavaScript code. Now, you can run the JavaScript code using Node.js:
+
+```bash
+node hello.js
+```
+
+You should see the following output:
+
+```
+Hello, TypeScript!
+Hello, Alice!
+["apple", "banana", "orange"]
+{ name: "John Doe", age: 30 }
+```
+
+Congratulations! You have successfully created and compiled your first TypeScript program.
 
 ## Leveraging TypeScript's Features
 

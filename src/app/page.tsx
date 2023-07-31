@@ -1,15 +1,15 @@
 import Link from '@/components/Link';
 import Tag from '@/components/Tag';
 import metadata from '@/data/metadata';
-import { Blog, allBlogs } from 'contentlayer/generated';
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer';
-import { formatDate } from 'pliny/utils/formatDate';
+import { allCoreContent, sortPosts } from '@/utils/contentlayer';
+import { formatDate } from '@/utils/formatDate';
+import { allBlogs } from 'contentlayer/generated';
 
 const MAX_DISPLAY = 5;
 
 export default async function Page() {
-  const sortedPosts: Blog[] = sortPosts(allBlogs);
-  const posts: Blog[] = allCoreContent(sortedPosts);
+  const sortedPosts = sortPosts(allBlogs);
+  const posts = allCoreContent(sortedPosts);
 
   return (
     <>

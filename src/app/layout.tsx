@@ -1,17 +1,16 @@
-import 'pliny/search/algolia.css';
-import '../styles/prism.css';
-import '../styles/tailwind.css';
+import '@/styles/prism.css';
+import '@/styles/tailwind.css';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'katex/dist/katex.css';
 
 import Footer from '@/components/Footer';
+import { Analytics, AnalyticsConfig } from '@/components/GoogleAnalytics';
 import Header from '@/components/Header';
 import SectionContainer from '@/components/SectionContainer';
+import { SearchConfig, SearchProvider } from '@/components/search';
 import siteMetadata from '@/data/metadata';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { Analytics, AnalyticsConfig } from 'pliny/analytics';
-import { SearchConfig, SearchProvider } from 'pliny/search';
 import { ReactNode } from 'react';
 import { ThemeProviders } from './theme-providers';
 
