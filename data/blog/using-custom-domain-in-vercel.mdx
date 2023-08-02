@@ -1,0 +1,55 @@
+---
+title: 'Using Custom Domain in Vercel'
+date: '2023-08-01'
+tags: ['tutorial', 'vercel', 'domain', 'namecheap']
+draft: false
+summary: Do you know you can use custom domain in Vercel? Let me tell you how.
+---
+
+For a website with static content like this blog, people usually use either [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/)
+to host it because you don't need to maintain your own server or even manage your own SSL certificate. In both platforms, you can either use
+a custom subdomain that they provide (e.g. https://vferdiansyah.vercel.app), or if you already have your own domain, you can opt to use it instead.
+
+## Vercel Setup
+
+On your [Vercel dashboard](https://vercel.com/dashboard), select the project that you want to associate with your custom domain and go to `Settings` then select `Domains` menu item.
+
+![Vercel Domain Settings](/static/images/using-custom-domain-in-vercel/vercel-domain-settings.png)
+
+In the `Domains` page, enter the domain name that you want to add, and click `Add` button on the right.
+
+![Vercel Enter Domain](/static/images/using-custom-domain-in-vercel/vercel-enter-domain.png)
+
+A modal will popup and just choose the recommended option.
+
+![Vercel Add Domain](/static/images/using-custom-domain-in-vercel/vercel-add-domain.png)
+
+You will then see your domain's A record like the image below.
+
+![Vercel A Record](/static/images/using-custom-domain-in-vercel/vercel-a-record.png)
+
+Click on the `or Nameservers` tab and click on the `Enable Vercel DNS` button.
+
+![Vercel Enable Nameserver](/static/images/using-custom-domain-in-vercel/vercel-enable-nameserver.png)
+
+It will display the nameserver information that you will need to put to your domain in [Namecheap](https://namecheap.com/).
+
+![Vercel Nameserver](/static/images/using-custom-domain-in-vercel/vercel-nameserver.png)
+
+## Namecheap Setup
+
+Once our setup in Vercel is complete, we need to setup our domain in Namecheap. So go to https://namecheap.com/ and login with your credentials.
+
+Once you're logged in, go to `Domain List` from the sidebar, choose the domain that you want to configure, and click on `MANAGE`.
+
+![Namecheap Domain List](/static/images/using-custom-domain-in-vercel/namecheap-domain-list.png)
+
+Now, find the `NAMESERVERS`, click on the dropdown and select `Custom DNS`.
+
+![Namecheap Manage Domain](/static/images/using-custom-domain-in-vercel/namecheap-manage-domain.png)
+
+Input Vercel's nameserver addresses and click the green checkmark on the right.
+
+![Namecheap Nameservers](/static/images/using-custom-domain-in-vercel/namecheap-nameservers.png)
+
+That's it! You're done! Now you just need to wait until it propagates and you will be able to access your website using your own domain.
