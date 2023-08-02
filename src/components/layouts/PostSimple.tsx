@@ -17,7 +17,7 @@ type Props = {
 };
 
 const PostSimple = ({ content, next, prev, children }: Props) => {
-  const { path, slug, date, title } = content;
+  const { date, title } = content;
 
   return (
     <SectionContainer>
