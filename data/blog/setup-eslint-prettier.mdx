@@ -1,0 +1,151 @@
+---
+title: 'Set up ESLint and Prettier for Your JavaScript Project'
+date: '2023-08-06'
+tags: ['tutorial', 'javascript', 'eslint', 'prettier']
+draft: false
+summary: 'A good developer experience will help you produce better code and ship better product. ESLint and Prettier will help you with that.'
+---
+
+Developer experience is really important when you are working on a project.
+A good developer experience is going to help you and your team be more productive,
+and eventually, produce better code which leads to better product.
+
+One of the easiest thing that you can do to improve your developer experience is to
+enforce the same code-styling rules. If you are working in a team, everyone's coding style
+might be different, especially if they are used to different programming languages.
+This is where [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) came into the scene.
+
+ESLint is a highly configurable JavaScript linting tool which can be used to find and
+fix problems and issues with your code. You and your team can choose which rules to enable or disable.
+
+Prettier, unlike ESLint, is focused purely on code formatting. It can be used for other programming
+languages other than JavaScript such as HTML, CSS, Markdown, JSON, etc. And unlike ESLint, there are
+not many configuration that you can do.
+
+## Getting Started
+
+In a new workspace, use `npm init` to generate a new `package.json` file.
+
+```json filename="package.json"
+{
+  "name": "a-very-cool-project-name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+```
+
+## Setup ESLint and Prettier
+
+Run the following command from your CLI:
+
+```bash
+npm install --save-dev eslint prettier eslint-config-prettier
+```
+
+What this command do is that it will install `eslint`, `prettier` and `eslint-config-prettier` to your project,
+and add it to your `devDependencies`.
+
+## Create ESLint Config File
+
+To configure ESLint, you need to add a configuration file to your project. Run the following command from your CLI:
+
+```bash
+npm init @eslint/config
+```
+
+When prompted, choose `To check syntax and find problems` and output the file as JSON for now.
+Your generated configuration should look like this (more or less, depending on other options):
+
+```json filename=".eslintrc.json"
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {}
+}
+```
+
+## Create Prettier Config File
+
+In the root of your project, create `.prettierrc` file and add the following config:
+
+```json filename=".prettierrc"
+{
+  "printWidth": 80,
+  "tabWidth": 2
+}
+```
+
+This configuration tells Prettier to wrap lines that are more than 80 characters
+and to use 2 spaces for indentation.
+
+Let's create a `.prettierignore` file in our root project to tell Prettier which know
+which files/directories that we don't want to format.
+
+```json filename=".prettierignore"
+# Ignore artifacts:
+package-lock.json
+build
+coverage
+```
+
+## Resolving Conflict Between ESLint and Prettier Rules
+
+Since we installed `eslint-config-prettier`, we are going to use it to automatically
+turn off ESLint rules that Prettier should handle. In the `.eslintrc.json` file, we
+should add Prettier to the extends array - making sure that it goes last so that it
+has the chance to override other configs.
+
+```json filename=".eslintrc.json"
+{
+  "env": {
+    ...
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "parserOptions": {
+    ...
+  },
+  "rules": {
+    ...
+  }
+}
+```
+
+## Add Scripts to Package.json
+
+To test our configuration, add the below scripts to your `package.json`:
+
+```json filename="package.json"
+{
+  ...
+  "scripts": {
+    "prettier:check": "npx prettier --check .",
+    "prettier:fix": "npx prettier --write .",
+    "lint": "npx eslint ."
+    ...
+  },
+}
+```
+
+Now you can run
+
+```bash
+npm run lint // run ESLint on all files
+
+npm run prettier:check // Prettier check all files
+npm run prettier:fix // Prettier check all files and fix automatically
+```
+
+And we're done! Enjoy your freshly formatted code!
