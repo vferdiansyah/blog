@@ -1,0 +1,75 @@
+---
+title: 'Building an API with NestJS #1: Initial Setup'
+date: '2023-08-10'
+tags: ['series', 'typescript', 'nestjs', 'api']
+draft: false
+summary: 'In this first part of "Building an API with NestJS" series, we will learn on how to bootstrap our base project to create our API.'
+---
+
+## Introduction to NestJS
+
+[NestJS](https://nestjs.com/), according to the official website, is "a progressive Node.js framework for building efficient, reliable and scalable server-side applications."
+Compared with other frameworks like [Express](https://expressjs.com/), NestJS is quite opinionated about how we should do something and how we should structure our code.
+This can be considered a good thing, especially if you don't have a lot of production experience since it forces us to follow best practices and keeping our code consistent.
+
+## Installing NestJS
+
+You need to first install NestJS CLI if you haven't already.
+
+```bash
+npm i -g @nestjs/cli
+```
+
+Then, scaffold the project with the following command.
+
+```bash
+nest new <project-name>
+```
+
+If you want to have a stricter feature set, like I'm gonna do, use `--strict` flag like this:
+
+```bash
+nest new --strict <project-name>
+```
+
+The above command will generate a new project with the following structure.
+
+![Project Structure](/static/images/real-world-api-with-nestjs-part-1/project-structure.png)
+
+If you want to start building right away, you can skip the next section. But, if you want to extend existing [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) config,
+e.g. using [Airbnb's style guide](https://github.com/airbnb/javascript), read on.
+
+## (Optional) Setup Airbnb's ESLint Config
+
+As I have wrote [previously](https://www.veriferdiansyah.dev/blog/setup-eslint-prettier), ESLint and Prettier are important to ensure that you have a
+good developer experience. I personally love Airbnb's style guide and that's why I always use it whenever I'm creating a new JavaScript/TypeScript project.
+Beside Airbnb, there are a couple widely used style guide such as [standard](https://github.com/standard/eslint-config-standard) and
+[Google](https://github.com/google/eslint-config-google).
+
+Since we're not using [React](https://react.dev/), we're going to use [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base)
+instead of [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb).
+
+```bash
+npx install-peerdeps --dev eslint-config-airbnb-base
+```
+
+What this command does is that it will install `eslint-config-airbnb-base` alongside `eslint` and `eslint-plugin-import`.
+Since we're using TypeScript, we need another library called [eslint-config-airbnb-typescript](https://github.com/iamturns/eslint-config-airbnb-typescript)
+for our linter to work.
+
+```bash
+npm i --save-dev eslint-config-airbnb-typescript
+```
+
+And that's it. You're done. Try running `npx eslint "{src,apps,libs,test}/**/*.ts"` and you're going to see results like this:
+
+![ESLint Check](/static/images/real-world-api-with-nestjs-part-1/eslint-check.png)
+
+To automatically fix auto-fixable problems, run ESLint with `--fix` flag like this `npx eslint "{src,apps,libs,test}/**/*.ts" --fix`.
+
+Another optional thing, you can add couple more plugins like [eslint-plugin-promise](https://github.com/eslint-community/eslint-plugin-promise),
+[eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest), or [eslint-plugin-security](https://github.com/eslint-community/eslint-plugin-security)
+if you want your styling to be more comprehensive.
+
+In the next part of this series, I'm going to explain about [husky](https://typicode.github.io/husky/), [lint-staged](https://github.com/okonet/lint-staged)
+and [commitlint](https://commitlint.js.org/#/). Stay tuned for more!
