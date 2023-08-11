@@ -7,9 +7,39 @@
       <language>en-us</language>
       <managingEditor>veri.ferdi@gmail.com (Veri Ferdiansyah)</managingEditor>
       <webMaster>veri.ferdi@gmail.com (Veri Ferdiansyah)</webMaster>
-      <lastBuildDate>Fri, 28 Jul 2023 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 10 Aug 2023 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://vferdiansyah.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-1</guid>
+    <title>Building an API with NestJS #1: Initial Setup</title>
+    <link>https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-1</link>
+    <description>In this first part of &quot;Building an API with NestJS&quot; series, we will learn on how to bootstrap our base project to create our API.</description>
+    <pubDate>Thu, 10 Aug 2023 00:00:00 GMT</pubDate>
+    <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>
+    <category>series</category><category>typescript</category><category>nestjs</category><category>api</category>
+  </item>
+
+  <item>
+    <guid>https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-2</guid>
+    <title>Building an API with NestJS #2: Setup Husky and CommitLint</title>
+    <link>https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-2</link>
+    <description>In this second part of &quot;Building an API with NestJS&quot; series, we will learn how to integrate husky and commitlint to our project.</description>
+    <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
+    <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>
+    <category>series</category><category>typescript</category><category>nestjs</category><category>api</category><category>husky</category><category>commitlint</category>
+  </item>
+
+  <item>
+    <guid>https://vferdiansyah.vercel.app/blog/setup-eslint-prettier</guid>
+    <title>Set up ESLint and Prettier for Your JavaScript Project</title>
+    <link>https://vferdiansyah.vercel.app/blog/setup-eslint-prettier</link>
+    <description>A good developer experience will help you produce better code and ship better product. ESLint and Prettier will help you with that.</description>
+    <pubDate>Sun, 06 Aug 2023 00:00:00 GMT</pubDate>
+    <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>
+    <category>tutorial</category><category>javascript</category><category>eslint</category><category>prettier</category>
+  </item>
+
   <item>
     <guid>https://vferdiansyah.vercel.app/blog/typescript-101</guid>
     <title>TypeScript 101: A Comprehensive Guide</title>
@@ -18,6 +48,16 @@
     <pubDate>Fri, 28 Jul 2023 00:00:00 GMT</pubDate>
     <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>
     <category>typescript</category>
+  </item>
+
+  <item>
+    <guid>https://vferdiansyah.vercel.app/blog/using-custom-domain-in-vercel</guid>
+    <title>Using Custom Domain in Vercel</title>
+    <link>https://vferdiansyah.vercel.app/blog/using-custom-domain-in-vercel</link>
+    <description>Do you know you can use custom domain in Vercel? Let me tell you how.</description>
+    <pubDate>Tue, 01 Aug 2023 00:00:00 GMT</pubDate>
+    <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>
+    <category>tutorial</category><category>vercel</category><category>domain</category><category>namecheap</category>
   </item>
 
     </channel>

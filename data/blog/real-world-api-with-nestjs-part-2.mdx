@@ -1,0 +1,77 @@
+---
+title: 'Building an API with NestJS #2: Setup Husky and CommitLint'
+date: '2023-08-11'
+tags: ['series', 'typescript', 'nestjs', 'api', 'husky', 'commitlint']
+draft: false
+summary: 'In this second part of "Building an API with NestJS" series, we will learn how to integrate husky and commitlint to our project.'
+---
+
+## Introduction
+
+Git messages are one of the things that we software engineers love to hate.
+Do it right and you will have a clean git log which everyone in your team will
+appreciate and love. Do it wrong and good luck finding out which commit that
+needs to be reverted because of production issues.
+
+If git messages are important, how can we maintain a clean git log then? This
+is the question that will be answered by this blog post.
+
+## Setting up CommitLint
+
+[CommitLint](https://commitlint.js.org/#/) is a linting tool to lint commits.
+Just like [ESLint](https://eslint.org/), CommitLint has it's own set of rules
+that our commits need to follow. In this tutorial, we're going to use
+[conventional commits specification](https://www.conventionalcommits.org/en/v1.0.0/).
+
+To install CommitLint and config-conventional, you need to run this command:
+
+```bash
+npm i --save-dev @commitlint/{cli,config-conventional}
+```
+
+To use it, we need to create a file called `.commitlintrc` on our project root
+and extend config-conventional rules.
+
+```json
+{
+  "extends": ["@commitlint/config-conventional"]
+}
+```
+
+Now, we need to setup `husky` so that it will lint our commit message using git
+hooks.
+
+## Setting up Husky
+
+[Husky](https://typicode.github.io/husky/) is, to put it simply, a helper to
+run Git hooks. You can use it to lint commit messages with the help of
+`commitlint`, run tests, lint code, etc. To install `husky` on your project,
+run the following command:
+
+```bash
+npx husky-init && npm install
+```
+
+It will:
+
+1. Add `prepare` script to your `package.json`
+1. Create a sample `pre-commit` hook
+1. Configure Git hooks path
+
+You need to add another hook called `commit-msg` using `husky add` so that
+`husky` will lint your commit message.
+
+```bash
+npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
+```
+
+Now you can try to commit your changes. If your commit message doesn't follow
+`config-conventional` rules, you will see something like this:
+
+![Husky CommitLint](/static/images/real-world-api-with-nestjs-part-2/husky-commitlint.png)
+
+That's because we don't follow `<type>[optional scope]: <description>` structure.
+Try changing your commit message to be `feat: initial commit` and see your
+changes being committed.
+
+That's it for now. Stay tuned for my next post!

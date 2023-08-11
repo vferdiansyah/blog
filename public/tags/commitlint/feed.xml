@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Improve 1% everyday | Veri Ferdiansyah</title>
+      <link>https://vferdiansyah.vercel.app/blog</link>
+      <description>My personal blog, where I share my learnings about software engineering</description>
+      <language>en-us</language>
+      <managingEditor>veri.ferdi@gmail.com (Veri Ferdiansyah)</managingEditor>
+      <webMaster>veri.ferdi@gmail.com (Veri Ferdiansyah)</webMaster>
+      <lastBuildDate>Fri, 11 Aug 2023 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://vferdiansyah.vercel.app/tags/commitlint/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-2</guid>
+    <title>Building an API with NestJS #2: Setup Husky and CommitLint</title>
+    <link>https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-2</link>
+    <description>In this second part of &quot;Building an API with NestJS&quot; series, we will learn how to integrate husky and commitlint to our project.</description>
+    <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
+    <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>
+    <category>series</category><category>typescript</category><category>nestjs</category><category>api</category><category>husky</category><category>commitlint</category>
+  </item>
+
+    </channel>
+  </rss>
