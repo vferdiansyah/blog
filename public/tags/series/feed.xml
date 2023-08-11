@@ -8,7 +8,7 @@
       <managingEditor>veri.ferdi@gmail.com (Veri Ferdiansyah)</managingEditor>
       <webMaster>veri.ferdi@gmail.com (Veri Ferdiansyah)</webMaster>
       <lastBuildDate>Thu, 10 Aug 2023 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://vferdiansyah.vercel.app/tags/typescript/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://vferdiansyah.vercel.app/tags/series/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
     <guid>https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-1</guid>
@@ -28,16 +28,6 @@
     <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
     <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>
     <category>series</category><category>typescript</category><category>nestjs</category><category>api</category><category>husky</category><category>commitlint</category>
-  </item>
-
-  <item>
-    <guid>https://vferdiansyah.vercel.app/blog/typescript-101</guid>
-    <title>TypeScript 101: A Comprehensive Guide</title>
-    <link>https://vferdiansyah.vercel.app/blog/typescript-101</link>
-    <description>Discover how TypeScript empowers software engineers with static typing, enhanced tooling, and seamless JavaScript compatibility for building scalable and maintainable applications.</description>
-    <pubDate>Fri, 28 Jul 2023 00:00:00 GMT</pubDate>
-    <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>
-    <category>typescript</category>
   </item>
 
     </channel>

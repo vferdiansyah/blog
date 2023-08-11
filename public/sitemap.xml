@@ -5,10 +5,76 @@
   </url>
 
   <url>
+    <loc>https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-1</loc>
+  </url>
+
+  <url>
+    <loc
+      >https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-2</loc
+    >
+  </url>
+
+  <url>
+    <loc>https://vferdiansyah.vercel.app/blog/setup-eslint-prettier</loc>
+  </url>
+
+  <url>
     <loc>https://vferdiansyah.vercel.app/blog/typescript-101</loc>
   </url>
 
   <url>
+    <loc>https://vferdiansyah.vercel.app/blog/using-custom-domain-in-vercel</loc>
+  </url>
+
+  <url>
+    <loc>https://vferdiansyah.vercel.app/tags/api</loc>
+  </url>
+
+  <url>
+    <loc>https://vferdiansyah.vercel.app/tags/domain</loc>
+  </url>
+
+  <url>
+    <loc>https://vferdiansyah.vercel.app/tags/eslint</loc>
+  </url>
+
+  <url>
+    <loc>https://vferdiansyah.vercel.app/tags/husky</loc>
+  </url>
+
+  <url>
+    <loc>https://vferdiansyah.vercel.app/tags/javascript</loc>
+  </url>
+
+  <url>
+    <loc>https://vferdiansyah.vercel.app/tags/namecheap</loc>
+  </url>
+
+  <url>
+    <loc>https://vferdiansyah.vercel.app/tags/nestjs</loc>
+  </url>
+
+  <url>
+    <loc>https://vferdiansyah.vercel.app/tags/commitlint</loc>
+  </url>
+
+  <url>
+    <loc>https://vferdiansyah.vercel.app/tags/series</loc>
+  </url>
+
+  <url>
     <loc>https://vferdiansyah.vercel.app/tags/typescript</loc>
+  </url>
+
+  <url>
+    <loc>https://vferdiansyah.vercel.app/tags/vercel</loc>
+  </url>
+
+  <url>
+    <loc>https://vferdiansyah.vercel.app/tags/tutorial</loc>
+  </url>
+
+  <url>
+    <loc>https://vferdiansyah.vercel.app/tags/prettier</loc>
   </url>
 </urlset>

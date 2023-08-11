@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Improve 1% everyday | Veri Ferdiansyah</title>
+      <link>https://vferdiansyah.vercel.app/blog</link>
+      <description>My personal blog, where I share my learnings about software engineering</description>
+      <language>en-us</language>
+      <managingEditor>veri.ferdi@gmail.com (Veri Ferdiansyah)</managingEditor>
+      <webMaster>veri.ferdi@gmail.com (Veri Ferdiansyah)</webMaster>
+      <lastBuildDate>Sun, 06 Aug 2023 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://vferdiansyah.vercel.app/tags/prettier/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://vferdiansyah.vercel.app/blog/setup-eslint-prettier</guid>
+    <title>Set up ESLint and Prettier for Your JavaScript Project</title>
+    <link>https://vferdiansyah.vercel.app/blog/setup-eslint-prettier</link>
+    <description>A good developer experience will help you produce better code and ship better product. ESLint and Prettier will help you with that.</description>
+    <pubDate>Sun, 06 Aug 2023 00:00:00 GMT</pubDate>
+    <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>
+    <category>tutorial</category><category>javascript</category><category>eslint</category><category>prettier</category>
+  </item>
+
+    </channel>
+  </rss>
