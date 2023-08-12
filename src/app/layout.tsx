@@ -13,6 +13,7 @@ import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
 import { ThemeProviders } from './theme-providers';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -112,6 +113,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               >
                 <Header />
                 <main className="mb-auto">{children}</main>
+                <VercelAnalytics />
               </SearchProvider>
               <Footer />
             </div>

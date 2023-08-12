@@ -6,7 +6,7 @@ const metadata = {
     'My personal blog, where I share my learnings about software engineering',
   language: 'en-us',
   theme: 'system',
-  siteUrl: 'https://vferdiansyah.vercel.app',
+  siteUrl: 'https://veriferdiansyah.dev',
   siteRepo: 'https://github.com/vferdiansyah/blog',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
@@ -17,7 +17,7 @@ const metadata = {
   locale: 'en-US',
   analytics: {
     googleAnalytics: {
-      googleAnalyticsId: 'G-CEKKYCBSBL',
+      googleAnalyticsId: process.env.NEXT_GA_ID,
     },
   },
   comments: {

@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>Improve 1% everyday | Veri Ferdiansyah</title>
-      <link>https://vferdiansyah.vercel.app/blog</link>
+      <link>https://veriferdiansyah.dev/blog</link>
       <description>My personal blog, where I share my learnings about software engineering</description>
       <language>en-us</language>
       <managingEditor>veri.ferdi@gmail.com (Veri Ferdiansyah)</managingEditor>
       <webMaster>veri.ferdi@gmail.com (Veri Ferdiansyah)</webMaster>
       <lastBuildDate>Tue, 01 Aug 2023 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://vferdiansyah.vercel.app/tags/domain/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://veriferdiansyah.dev/tags/domain/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://vferdiansyah.vercel.app/blog/using-custom-domain-in-vercel</guid>
+    <guid>https://veriferdiansyah.dev/blog/using-custom-domain-in-vercel</guid>
     <title>Using Custom Domain in Vercel</title>
-    <link>https://vferdiansyah.vercel.app/blog/using-custom-domain-in-vercel</link>
+    <link>https://veriferdiansyah.dev/blog/using-custom-domain-in-vercel</link>
     <description>Do you know you can use custom domain in Vercel? Let me tell you how.</description>
     <pubDate>Tue, 01 Aug 2023 00:00:00 GMT</pubDate>
     <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>

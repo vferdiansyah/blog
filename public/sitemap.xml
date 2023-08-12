@@ -1,80 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://vferdiansyah.vercel.app</loc>
-  </url>
-
-  <url>
-    <loc>https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-1</loc>
+    <loc>https://veriferdiansyah.dev</loc>
   </url>
 
   <url>
     <loc
-      >https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-2</loc
+      >https://veriferdiansyah.dev/blog/real-world-api-with-nestjs-part-1</loc
     >
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/blog/setup-eslint-prettier</loc>
+    <loc
+      >https://veriferdiansyah.dev/blog/real-world-api-with-nestjs-part-2</loc
+    >
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/blog/typescript-101</loc>
+    <loc>https://veriferdiansyah.dev/blog/setup-eslint-prettier</loc>
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/blog/using-custom-domain-in-vercel</loc>
+    <loc>https://veriferdiansyah.dev/blog/typescript-101</loc>
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/tags/api</loc>
+    <loc>https://veriferdiansyah.dev/blog/using-custom-domain-in-vercel</loc>
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/tags/domain</loc>
+    <loc>https://veriferdiansyah.dev/tags/api</loc>
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/tags/eslint</loc>
+    <loc>https://veriferdiansyah.dev/tags/commitlint</loc>
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/tags/husky</loc>
+    <loc>https://veriferdiansyah.dev/tags/domain</loc>
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/tags/javascript</loc>
+    <loc>https://veriferdiansyah.dev/tags/eslint</loc>
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/tags/namecheap</loc>
+    <loc>https://veriferdiansyah.dev/tags/husky</loc>
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/tags/nestjs</loc>
+    <loc>https://veriferdiansyah.dev/tags/javascript</loc>
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/tags/commitlint</loc>
+    <loc>https://veriferdiansyah.dev/tags/namecheap</loc>
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/tags/series</loc>
+    <loc>https://veriferdiansyah.dev/tags/nestjs</loc>
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/tags/typescript</loc>
+    <loc>https://veriferdiansyah.dev/tags/prettier</loc>
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/tags/vercel</loc>
+    <loc>https://veriferdiansyah.dev/tags/series</loc>
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/tags/tutorial</loc>
+    <loc>https://veriferdiansyah.dev/tags/tutorial</loc>
   </url>
 
   <url>
-    <loc>https://vferdiansyah.vercel.app/tags/prettier</loc>
+    <loc>https://veriferdiansyah.dev/tags/typescript</loc>
+  </url>
+
+  <url>
+    <loc>https://veriferdiansyah.dev/tags/vercel</loc>
   </url>
 </urlset>
