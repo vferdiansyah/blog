@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>Improve 1% everyday | Veri Ferdiansyah</title>
-      <link>https://vferdiansyah.vercel.app/blog</link>
+      <link>https://veriferdiansyah.dev/blog</link>
       <description>My personal blog, where I share my learnings about software engineering</description>
       <language>en-us</language>
       <managingEditor>veri.ferdi@gmail.com (Veri Ferdiansyah)</managingEditor>
       <webMaster>veri.ferdi@gmail.com (Veri Ferdiansyah)</webMaster>
       <lastBuildDate>Thu, 10 Aug 2023 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://vferdiansyah.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://veriferdiansyah.dev/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-1</guid>
+    <guid>https://veriferdiansyah.dev/blog/real-world-api-with-nestjs-part-1</guid>
     <title>Building an API with NestJS #1: Initial Setup</title>
-    <link>https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-1</link>
+    <link>https://veriferdiansyah.dev/blog/real-world-api-with-nestjs-part-1</link>
     <description>In this first part of &quot;Building an API with NestJS&quot; series, we will learn on how to bootstrap our base project to create our API.</description>
     <pubDate>Thu, 10 Aug 2023 00:00:00 GMT</pubDate>
     <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>
@@ -21,9 +21,9 @@
   </item>
 
   <item>
-    <guid>https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-2</guid>
+    <guid>https://veriferdiansyah.dev/blog/real-world-api-with-nestjs-part-2</guid>
     <title>Building an API with NestJS #2: Setup Husky and CommitLint</title>
-    <link>https://vferdiansyah.vercel.app/blog/real-world-api-with-nestjs-part-2</link>
+    <link>https://veriferdiansyah.dev/blog/real-world-api-with-nestjs-part-2</link>
     <description>In this second part of &quot;Building an API with NestJS&quot; series, we will learn how to integrate husky and commitlint to our project.</description>
     <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
     <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>
@@ -31,9 +31,9 @@
   </item>
 
   <item>
-    <guid>https://vferdiansyah.vercel.app/blog/setup-eslint-prettier</guid>
+    <guid>https://veriferdiansyah.dev/blog/setup-eslint-prettier</guid>
     <title>Set up ESLint and Prettier for Your JavaScript Project</title>
-    <link>https://vferdiansyah.vercel.app/blog/setup-eslint-prettier</link>
+    <link>https://veriferdiansyah.dev/blog/setup-eslint-prettier</link>
     <description>A good developer experience will help you produce better code and ship better product. ESLint and Prettier will help you with that.</description>
     <pubDate>Sun, 06 Aug 2023 00:00:00 GMT</pubDate>
     <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>
@@ -41,9 +41,9 @@
   </item>
 
   <item>
-    <guid>https://vferdiansyah.vercel.app/blog/typescript-101</guid>
+    <guid>https://veriferdiansyah.dev/blog/typescript-101</guid>
     <title>TypeScript 101: A Comprehensive Guide</title>
-    <link>https://vferdiansyah.vercel.app/blog/typescript-101</link>
+    <link>https://veriferdiansyah.dev/blog/typescript-101</link>
     <description>Discover how TypeScript empowers software engineers with static typing, enhanced tooling, and seamless JavaScript compatibility for building scalable and maintainable applications.</description>
     <pubDate>Fri, 28 Jul 2023 00:00:00 GMT</pubDate>
     <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>
@@ -51,9 +51,9 @@
   </item>
 
   <item>
-    <guid>https://vferdiansyah.vercel.app/blog/using-custom-domain-in-vercel</guid>
+    <guid>https://veriferdiansyah.dev/blog/using-custom-domain-in-vercel</guid>
     <title>Using Custom Domain in Vercel</title>
-    <link>https://vferdiansyah.vercel.app/blog/using-custom-domain-in-vercel</link>
+    <link>https://veriferdiansyah.dev/blog/using-custom-domain-in-vercel</link>
     <description>Do you know you can use custom domain in Vercel? Let me tell you how.</description>
     <pubDate>Tue, 01 Aug 2023 00:00:00 GMT</pubDate>
     <author>veri.ferdi@gmail.com (Veri Ferdiansyah)</author>
