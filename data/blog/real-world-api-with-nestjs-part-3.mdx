@@ -1,0 +1,105 @@
+---
+title: 'Building an API with NestJS #3: Adding Configurations'
+date: '2023-08-17'
+tags: ['series', 'typescript', 'nestjs', 'api', 'config']
+draft: false
+summary: 'In this third part of "Building an API with NestJS" series, we will learn on how to create and validate app configurations for our API.'
+---
+
+## Introduction
+
+An application, especially backend application, usually need some kind of
+configuration for it to work properly. This configuration could hold public
+or sensitive information such as our database connections, caching, feature
+flags, and so on. We can even make so that our app will not be able to run if
+some configuration settings are missing.
+
+Often times, we also need our app to run in different environments like
+`development`, `staging`, and `production`. Depending on the environment, we
+need to use different configuration settings.
+
+Let's see how we can add this kind of configuration to our NestJS app.
+
+## Installing Dependency
+
+First, we need to install the required dependency.
+
+```bash
+npm i @nestjs/config
+```
+
+Internally, this package is using [dotenv](https://github.com/motdotla/dotenv).
+
+## Adding Your First Config
+
+Create a new file called `.env` in your project root. And put your configuration
+in it. For example, let's store a [PostgreSQL](https://www.postgresql.org/)
+database configuration:
+
+```
+DATABASE_USER=postgres
+DATABASE_PASSWORD=postgres
+DATABASE_NAME=postgres
+DATABASE_PORT=5432
+```
+
+The above config is just an example. You should replace it with your own config.
+
+By default, `@nestjs/config` package will look for a `.env` file in the root
+directory of your application. If you don't want to use `.env` but prefer to use
+let's say a `.env.local` file, you can customize the package to read your custom
+file as well. I'll explain how in the next section.
+
+## Load Your Config
+
+To load your config, first you need to import `ConfigModule` into
+your `AppModule`.
+
+```typescript
+import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+
+@Module({
+  imports: [ConfigModule.forRoot()],
+  controllers: [AppController],
+  providers: [AppService],
+})
+export class AppModule {}
+```
+
+This method will load and parse your configuration. If you are using filenames
+beside `.env`, you can specify it in the `ConfigModule.forRoot()` like this:
+
+```typescript
+ConfigModule.forRoot({
+  envFilePath: ['.env.local', '.env.development'],
+});
+```
+
+## Using Your Config
+
+To use your configuration within your module, you will need to import
+`ConfigModule` into the module that will use it.
+
+```typescript
+@Module({
+  imports: [ConfigModule],
+  // ...
+})
+```
+
+Then, inject it into your constructor:
+
+```typescript
+constructor(private configService: ConfigService) {}
+```
+
+And we can use it like this:
+
+```typescript
+const dbName = this.configService.get<string>('DATABASE_USER');
+```
+
+That's it! Now you have a working config for your app.
